@@ -32,8 +32,12 @@ class SnakeGame:
         self.display = pygame.display.set_mode((self.w, self.h))
         pygame.display.set_caption('Snake')
         self.clock = pygame.time.Clock()
+        self.reset()
         
         # init game state
+       
+    
+    def reset(self):
         self.direction = Direction.RIGHT
         
         self.head = Point(self.w/2, self.h/2)
@@ -44,6 +48,8 @@ class SnakeGame:
         self.score = 0
         self.food = None
         self._place_food()
+        self.frame_iteration = 0
+
         
     def _place_food(self):
         x = random.randint(0, (self.w-BLOCK_SIZE )//BLOCK_SIZE )*BLOCK_SIZE 
