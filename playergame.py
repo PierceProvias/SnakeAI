@@ -33,8 +33,6 @@ class SnakeGame:
         pygame.display.set_caption('Snake')
         self.clock = pygame.time.Clock()
         self.reset()
-        
-        # init game state
        
     
     def reset(self):
